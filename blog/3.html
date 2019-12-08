@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CSS常用布局方案 —— 三栏布局 | 清风迎人</title>
+    <meta name="description" content="THINK TWICE CODE ONCE！">
+    
+    
+    <link rel="preload" href="/my-blog/assets/css/0.styles.0183eee3.css" as="style"><link rel="preload" href="/my-blog/assets/js/app.6b426ff9.js" as="script"><link rel="preload" href="/my-blog/assets/js/4.59c129d2.js" as="script"><link rel="prefetch" href="/my-blog/assets/js/2.91612135.js"><link rel="prefetch" href="/my-blog/assets/js/3.133f7381.js"><link rel="prefetch" href="/my-blog/assets/js/5.b54845e0.js"><link rel="prefetch" href="/my-blog/assets/js/6.5dfe8d2b.js"><link rel="prefetch" href="/my-blog/assets/js/7.dc94658b.js"><link rel="prefetch" href="/my-blog/assets/js/8.95364e61.js"><link rel="prefetch" href="/my-blog/assets/js/9.d436c7b8.js">
+    <link rel="stylesheet" href="/my-blog/assets/css/0.styles.0183eee3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/my-blog/" class="home-link router-link-active"><!----> <span class="site-name">清风迎人</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/my-blog/" class="nav-link">首页</a></div><div class="nav-item"><a href="/my-blog/blog/FirstBlog.html" class="nav-link">博客</a></div> <a href="https://github.com/yj666" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/my-blog/" class="nav-link">首页</a></div><div class="nav-item"><a href="/my-blog/blog/FirstBlog.html" class="nav-link">博客</a></div> <a href="https://github.com/yj666" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/my-blog/" class="sidebar-link">首页</a></li><li><a href="/my-blog/blog/FirstBlog.html" class="sidebar-link">轮播图组件</a></li><li><a href="/my-blog/blog/coffee.html" class="sidebar-link">当我们在谈论咖啡的时我们在谈论什么</a></li><li><a href="/my-blog/blog/3.html" class="active sidebar-link">CSS常用布局方案 —— 三栏布局</a></li><li><a href="/my-blog/blog/2.html" class="sidebar-link">CSS常用布局方案 —— 双栏布局</a></li><li><a href="/my-blog/blog/4.html" class="sidebar-link">关于 vue 中的一些问题</a></li></ul> </div> <div class="page"> <div class="content"><h1 id="css常用布局方案-——-三栏布局"><a href="#css常用布局方案-——-三栏布局" class="header-anchor">#</a> CSS常用布局方案 —— 三栏布局</h1> <p><img src="/my-blog/assets/img/css1.b66f50d5.png" alt="An image"></p> <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;三栏布局&lt;/title&gt;
+        &lt;style&gt;
+            /*
+            三栏布局的方案一般左右两栏固定宽度, 中间自适应, 有两个流行的解决方案
+            一个是「圣杯布局」, 另一个是「双飞翼布局」
+            */
+            .case {
+                padding: 10px;
+                margin: 20px;
+                border: 1px solid #eee;
+            }
+
+            .clearfix::after {
+                content: &quot; &quot;;
+                display: block;
+                clear: both;
+            }
+
+            .holy-grails {
+                width: 800px;
+                margin: 0 auto;
+                border: 1px solid #000;
+            }
+
+            .holy-grails .header,
+            .holy-grails .footer {
+                height: 40px;
+                background: lightyellow;
+            }
+
+            .holy-grails .section {
+                /* 200 和 150 分别是 left 和 right 的宽度 */
+                padding-left: 200px;
+                padding-right: 150px;
+            }
+
+            .holy-grails .column {
+                position: relative;
+                float: left;
+                height: 200px;
+            }
+
+            .holy-grails .main {
+                width: 100%;
+                background: lightblue;
+            }
+
+            .holy-grails .left {
+                width: 200px;
+                margin-left: -100%;
+                left: -200px;
+                background: lightpink;
+            }
+
+            .holy-grails .right {
+                width: 150px;
+                margin-right: -150px;
+                background: lightgray;
+            }
+
+            /* 双飞翼布局 */
+            .tb {
+                width: 800px;
+                margin: 0 auto;
+                border: 1px solid #000;
+            }
+
+            .tb .header,
+            .tb .footer {
+                height: 40px;
+                background: lightyellow;
+            }
+
+            .tb .section {
+                /* 200 和 150 分别是 left 和 right 的宽度 */
+                /* padding-left: 200px;
+                padding-right: 150px; */
+            }
+
+            .tb .column {
+                float: left;
+                height: 200px;
+            }
+
+            .tb .main {
+                width: 100%;
+                background: lightblue;
+            }
+
+            .tb .main-inner {
+                /* 150 和 200 分别是右边和左边的大小 */
+                margin: 0 150px 0 200px;
+                height: 200px;
+            }
+
+            .tb .left {
+                width: 200px;
+                margin-left: -100%;
+                background: lightpink;
+            }
+
+            .tb .right {
+                width: 150px;
+                margin-left: -150px;
+                background: lightgray;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;case&quot;&gt;
+            &lt;h3&gt;圣杯布局&lt;/h3&gt;
+            &lt;div class=&quot;container holy-grails&quot;&gt;
+                &lt;div class=&quot;header&quot;&gt;
+                    header
+                &lt;/div&gt;
+                &lt;div class=&quot;section clearfix&quot;&gt;
+                    &lt;!-- 本来应该按照 left main right 的顺序写 HTML, 但是想让主体部分 main 更快加载, 所以把 main 写在最前面 --&gt;
+                    &lt;div class=&quot;main column&quot;&gt;
+                        main
+                    &lt;/div&gt;
+                    &lt;div class=&quot;left column&quot;&gt;
+                        left
+                    &lt;/div&gt;
+                    &lt;div class=&quot;right column&quot;&gt;
+                        right
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;footer&quot;&gt;
+                    footer
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;case&quot;&gt;
+            &lt;h3&gt;双飞翼布局&lt;/h3&gt;
+            &lt;div class=&quot;container tb&quot;&gt;
+                &lt;div class=&quot;header&quot;&gt;
+                    header
+                &lt;/div&gt;
+                &lt;div class=&quot;section clearfix&quot;&gt;
+                    &lt;div class=&quot;main column&quot;&gt;
+                        &lt;div class=&quot;main-inner&quot;&gt;
+                            main
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;left column&quot;&gt;
+                        left
+                    &lt;/div&gt;
+                    &lt;div class=&quot;right column&quot;&gt;
+                        right
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;footer&quot;&gt;
+                    footer
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/my-blog/blog/coffee.html" class="prev">
+          当我们在谈论咖啡的时我们在谈论什么
+        </a></span> <span class="next"><a href="/my-blog/blog/2.html">
+          CSS常用布局方案 —— 双栏布局
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/my-blog/assets/js/app.6b426ff9.js" defer></script><script src="/my-blog/assets/js/4.59c129d2.js" defer></script>
+  </body>
+</html>
