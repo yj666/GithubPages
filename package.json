@@ -10,7 +10,5 @@
   "devDependencies": {
     "vuepress": "^0.14.8"
   },
-  "dependencies": {
-    "fullpage.js": "^3.0.8"
-  }
+  "dependencies": {}
 }
