@@ -5,9 +5,10 @@
   },
   "name": "myBlog",
   "version": "1.0.0",
-  "main": "Layout.vue",
+  "main": "index.js",
   "license": "MIT",
   "devDependencies": {
     "vuepress": "^0.14.8"
   },
+  "dependencies": {}
 }
