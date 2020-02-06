@@ -1,6 +1,6 @@
 ---
 home: ture
-heroImage: /image/1.jpg
+heroImage: /image/coffee.jpeg
 heroText: Hi
 actionLink: /
 features:
