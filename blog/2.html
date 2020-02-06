@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CSS常用布局方案 —— 双栏布局 | Yang’s blog</title>
+    <meta name="description" content="THINK TWICE CODE ONCE！">
+    
+    
+    <link rel="preload" href="/my-blog/assets/css/0.styles.f23da7e7.css" as="style"><link rel="preload" href="/my-blog/assets/js/app.6059a133.js" as="script"><link rel="preload" href="/my-blog/assets/js/3.cadd2d6a.js" as="script"><link rel="prefetch" href="/my-blog/assets/js/2.3bee3607.js"><link rel="prefetch" href="/my-blog/assets/js/4.be29b5ca.js"><link rel="prefetch" href="/my-blog/assets/js/5.444d5eba.js"><link rel="prefetch" href="/my-blog/assets/js/6.9b2aef0a.js"><link rel="prefetch" href="/my-blog/assets/js/7.642e2456.js"><link rel="prefetch" href="/my-blog/assets/js/8.43272966.js">
+    <link rel="stylesheet" href="/my-blog/assets/css/0.styles.f23da7e7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/my-blog/" class="home-link router-link-active"><!----> <span class="site-name">Yang’s blog</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/my-blog/" class="nav-link">首页</a></div><div class="nav-item"><a href="/my-blog/blog/coffee.html" class="nav-link">博客</a></div> <a href="https://github.com/yj666" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/my-blog/" class="nav-link">首页</a></div><div class="nav-item"><a href="/my-blog/blog/coffee.html" class="nav-link">博客</a></div> <a href="https://github.com/yj666" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/my-blog/" class="sidebar-link">首页</a></li><li><a href="/my-blog/blog/coffee.html" class="sidebar-link">当我们在谈论咖啡的时我们在谈论什么</a></li><li><a href="/my-blog/blog/3.html" class="sidebar-link">CSS常用布局方案 —— 三栏布局</a></li><li><a href="/my-blog/blog/2.html" class="active sidebar-link">CSS常用布局方案 —— 双栏布局</a></li><li><a href="/my-blog/blog/4.html" class="sidebar-link">关于 vue 中的一些问题</a></li></ul> </div> <div class="page"> <div class="content"><h1 id="css常用布局方案-——-双栏布局"><a href="#css常用布局方案-——-双栏布局" class="header-anchor">#</a> CSS常用布局方案 —— 双栏布局</h1> <p><img src="/my-blog/assets/img/css.c6e5d32e.png" alt="An image"></p> <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;双栏布局&lt;/title&gt;
+    &lt;style&gt;
+        .case {
+            padding: 10px;
+            margin: 20px;
+            border: 1px solid #eee;
+        }
+        
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .clearfix::after {
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+
+        .column-left {
+            width: 200px;
+            background: lightblue;
+        }
+
+        .column-right {
+            width: 400px;
+            background: lightpink;
+        }
+
+        /* 这里通过 BFC 的方式来解决 float 的问题, 
+           具体可以查看 http://www.iyunlu.com/view/css-xhtml/55.html 
+        */
+        .bfc {
+            overflow: hidden;
+        }
+
+        /* 具体可以查看 http://www.iyunlu.com/view/css-xhtml/64.html */
+
+        /* 注意 inline-block 会有一定的缝隙, 可以通过下面的方式解决,
+           先在父元素上面通过把 letter-spacing 设置为负值, 然后把 inline-block 元素设置为正常值
+           当然这里的 -5px 是和文字大小有关系的, 具体看上面的链接
+        */
+        .inline-block-row {
+            letter-spacing: -5px;
+        }
+
+        .inline-block {
+            display: inline-block;
+            letter-spacing: normal;
+        }
+
+        /* 注意, 尽管 table 不是用来布局而是用来展示数据的, 但是这里为了演示所以直接用了
+           并且没有使用 table 标签, 而是通过 display 的 table 值来设置的
+        */
+        .table-row {
+            display: table-row;
+        }
+
+        .table-cell {
+            display: table-cell;
+        }
+
+        .position-row {
+            position: relative;
+            height: 100px;
+            background: lightgray;
+        }
+
+        .position-left {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .position-right {
+            position: absolute;
+            /* 这里的 400 是左边 column 的宽度 */
+            left: 400px;
+            top: 0;
+        }
+
+        /*
+        除了这些布局方案，还有 css3 的 flex 和 grid 也完全可以实现两栏布局, 而这些是 css3 之前的经典布局方案
+        其中 bfc 和 table 完全可以用来实现流式布局(即一边固定宽度, 另一边的宽度随着页面宽度的变化而变化)
+        */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;case&quot;&gt;
+        &lt;h3&gt;float 方案 1&lt;/h3&gt;
+        &lt;div class=&quot;row clearfix&quot;&gt;
+            &lt;div class=&quot;left column-left&quot;&gt;
+                left
+            &lt;/div&gt;
+            &lt;div class=&quot;left column-right&quot;&gt;
+                right
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;case&quot;&gt;
+        &lt;h3&gt;float 方案 2&lt;/h3&gt;
+        &lt;div class=&quot;row clearfix&quot;&gt;
+            &lt;div class=&quot;left column-left&quot;&gt;
+                left
+            &lt;/div&gt;
+            &lt;div class=&quot;column-right bfc&quot;&gt;
+                right
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;case&quot;&gt;
+        &lt;h3&gt;inline block 方案&lt;/h3&gt;
+        &lt;div class=&quot;row inline-block-row&quot;&gt;
+            &lt;div class=&quot;inline-block column-left&quot;&gt;
+                left
+            &lt;/div&gt;
+            &lt;div class=&quot;inline-block column-right&quot;&gt;
+                right
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;case&quot;&gt;
+        &lt;h3&gt;table 方案&lt;/h3&gt;
+        &lt;div class=&quot;row table-row&quot;&gt;
+            &lt;div class=&quot;table-cell column-left&quot;&gt;
+                left
+            &lt;/div&gt;
+            &lt;div class=&quot;table-cell column-right&quot;&gt;
+                right
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;case&quot;&gt;
+        &lt;h3&gt;position 方案&lt;/h3&gt;
+        &lt;div class=&quot;position-row&quot;&gt;
+            &lt;div class=&quot;position-left column-left&quot;&gt;
+                left
+            &lt;/div&gt;
+            &lt;div class=&quot;position-right column-right&quot;&gt;
+                right
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt; 
+&lt;/html&gt;      
+</code></pre></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/my-blog/blog/3.html" class="prev">
+          CSS常用布局方案 —— 三栏布局
+        </a></span> <span class="next"><a href="/my-blog/blog/4.html">
+          关于 vue 中的一些问题
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/my-blog/assets/js/app.6059a133.js" defer></script><script src="/my-blog/assets/js/3.cadd2d6a.js" defer></script>
+  </body>
+</html>
